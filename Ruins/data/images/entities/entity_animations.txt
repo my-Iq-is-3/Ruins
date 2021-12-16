@@ -1,0 +1,10 @@
+player/idle/ 7;7;40 loop
+player/run/ 7;7 loop
+tester/idle/ 60 loop
+tester/mad/ 60 loop
+newtester/idle/ 60 loop
+playerattack/idle/ 5;2;2;5 noloop
+ZuraSlug/idle/ 60 loop
+ZuraSlime/idle/ 60 loop
+EmeraldCharm/idle/ 60 loop
+HolyFeather/idle/ 60 loop
