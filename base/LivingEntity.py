@@ -12,6 +12,9 @@ class LivingEntity(REntity):
     def on_collide(self):
         pass
 
+    def on_death(self):
+        pass
+
     def damage(self,amount):
 
         if self.iframes > 0:
@@ -29,6 +32,7 @@ class LivingEntity(REntity):
                 elist.append(randitem(self.entity.x,self.entity.y))
                 call_item_event("ENTITY_KILL",[self])
             self.dead = True
+            self.on_death()
         max(self.health,0)
 
 
