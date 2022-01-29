@@ -223,6 +223,7 @@ while True:  # game loop
             if not iterated.__contains__(item.entity.type):
                 c = count(item, PlayerHandshake.player.items)
                 if not itemimages.keys().__contains__(item.entity.type):
+                    print("Loading item " + item.entity.type)
                     iimg = pygame.image.load("data/images/entities/" + item.entity.type + "/idle/idle_0.png")
                     iimg.set_alpha(50)
                     iimg.set_colorkey((255, 255, 255))
