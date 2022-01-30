@@ -22,7 +22,7 @@ class LaserSword(ChildEntity):
             if self.entity.rect().colliderect(ent.entity.rect()):
                 if issubclass(type(ent),LivingEntity):
                     ent.damage(PlayerHandshake.player.atkdamage)
-                    call_item_event("ENTITY_DAMAGE",[ent])
+                    call_item_event("ENTITY_DAMAGE",[ent,PlayerHandshake.player.atkdamage])
         if PlayerHandshake.player.attackingframes <= 0:
             elist.remove(self)
         super(LaserSword, self).draw(tile_rects, display, scroll)

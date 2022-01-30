@@ -15,6 +15,7 @@ from base.ItemHoverable import ItemHoverable
 from data.perlin.perlin_noise.perlin import Perlin
 from entities.HomingMissile import HomingMissile
 from entities.ZuraSlug import ZuraSlug
+from entities.bosses.CelestialAnomaly import CelestialAnomaly
 from entities.bosses.TestBoss import TestBoss
 from items.HolyFeather import HolyFeather
 from items.emeraldCharm import EmeraldCharm
@@ -289,7 +290,7 @@ while True:  # game loop
                 if event.key == K_a:
                     PlayerHandshake.player.attack()
                 if event.key == K_t:
-                    elist.append(TestBoss(PlayerHandshake.player.entity.x, PlayerHandshake.player.entity.y - 50))
+                    elist.append(CelestialAnomaly(PlayerHandshake.player.entity.x, PlayerHandshake.player.entity.y - 50))
                 if event.key == K_z:
                     elist.append(ZuraSlug(PlayerHandshake.player.entity.x, 0))
 

@@ -8,3 +8,4 @@ ZuraSlug/idle/ 60 loop
 ZuraSlime/idle/ 60 loop
 EmeraldCharm/idle/ 60 loop
 HolyFeather/idle/ 60 loop
+CelestialAnomaly/idle/ 10;20;20 loop 0

@@ -287,6 +287,7 @@ def load_animations(path):
         anim_path = sections[0]
         entity_info = anim_path.split('/')
         entity_type = entity_info[0]
+
         animation_id = entity_info[1]
         timings = sections[1].split(';')
         tags = sections[2].split(';')
@@ -295,7 +296,11 @@ def load_animations(path):
         for timing in timings:
             sequence.append([n,int(timing)])
             n += 1
-        anim = animation_sequence(sequence,path + anim_path,e_colorkey)
+        if sections.__len__() < 4:
+            anim = animation_sequence(sequence,path + anim_path,e_colorkey)
+        else:
+            custom_colorkey = (int(sections[3]),int(sections[3]),int(sections[3]))
+            anim = animation_sequence(sequence, path + anim_path, custom_colorkey)
         if entity_type not in animation_higher_database:
             animation_higher_database[entity_type] = {}
         animation_higher_database[entity_type][animation_id] = [anim.copy(),tags]

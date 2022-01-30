@@ -10,7 +10,6 @@ class Item(REntity):
 
     def __init__(self, xpos, ypos, type, desc,name):
         super(Item, self).__init__(type, xpos, ypos)
-        self.entity.alpha = 50
         self.desc = desc
         self.name = name
     def draw(self, tile_rects, display, scroll):
